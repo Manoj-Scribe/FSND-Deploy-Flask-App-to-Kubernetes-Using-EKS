@@ -3,6 +3,7 @@
 .flaskenv
 *.pyc
 *.pyo
+aws-auth-patch.yml
 env/
 env*
 dist/
