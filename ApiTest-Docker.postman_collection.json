@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "943ff609-7778-44cf-abdf-97c67da38870",
+		"name": "ApiTest-Docker",
+		"description": "This collection is for udacity Full stack developer course. This can be used to test the API endpoint of the running docker app.\r\n\r\nUse local host or AWS as required",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "check Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "a86be6192829c4f86aa74a30a450187d-873601136.us-east-2.elb.amazonaws.com",
+					"host": [
+						"a86be6192829c4f86aa74a30a450187d-873601136",
+						"us-east-2",
+						"elb",
+						"amazonaws",
+						"com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createJwtTokens",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "457e2bfe-b3bb-4f81-bc53-19341ea04bfe",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\":\"dummy@test.com\",\r\n\"password\":\"dockertest\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "a86be6192829c4f86aa74a30a450187d-873601136.us-east-2.elb.amazonaws.com/auth",
+					"host": [
+						"a86be6192829c4f86aa74a30a450187d-873601136",
+						"us-east-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDecryptedDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDM4NzEwODUsIm5iZiI6MTYwMjY2MTQ4NSwiZW1haWwiOiJkdW1teUB0ZXN0LmNvbSJ9.Swps-WPMENJ_QObLylc6ERNJw7u7j3KKRLdz4r-L3gE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "a86be6192829c4f86aa74a30a450187d-873601136.us-east-2.elb.amazonaws.com/contents",
+					"host": [
+						"a86be6192829c4f86aa74a30a450187d-873601136",
+						"us-east-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"contents"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
