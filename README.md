@@ -13,11 +13,8 @@ The app relies on a secret set as the environment variable `JWT_SECRET` to produ
 ## SnapShots of the project journey 
 
 <p align="middle">
-  
-  <img src="img/1.png" width="200" />
-  <img src="img/2.png" width="200" /> 
-  <img src="img/3.png" width="200" />
-  <img src="img/4.png" width="200" />
+  <img src="https://github.com/Manoj-Scribe/FSND-Deploy-Flask-App-to-Kubernetes-Using-EKS/blob/master/img/1.PNG" width="200" />
+  <img src="https://github.com/Manoj-Scribe/FSND-Deploy-Flask-App-to-Kubernetes-Using-EKS/blob/master/img/2.PNG" width="200" /> 
 </p>
 
 ## Project processing
@@ -47,7 +44,7 @@ I have included postman collection(ApiTest-Docker.postman_collection) in the rep
 
 
 ## Reference
-https://www.cnblogs.com/Liu-Hui/p/13388194.html - To solve the time problem
-used Jet brains Docker plugin on Pycharm (veryuseful)
-https://docs.aws.amazon.com/cli/latest/reference/ssm/put-parameter.html
+https://www.cnblogs.com/Liu-Hui/p/13388194.html - To solve the time problem <br>
+used Jet brains Docker plugin on Pycharm (veryuseful) <br>
+https://docs.aws.amazon.com/cli/latest/reference/ssm/put-parameter.html<br>
 
